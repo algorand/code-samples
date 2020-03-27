@@ -18,7 +18,7 @@ const AccountDetailComponent = props => {
   let downloadMnemonicFile = () => {
     const element = document.createElement("a");
     const file = new Blob([props.mnemonic], {
-      type: "text/plain"
+      type: "text/§plain"
     });
     element.href = URL.createObjectURL(file);
     element.download = "mnemonic.txt";
@@ -47,7 +47,7 @@ const AccountDetailComponent = props => {
             }
             onClick={copyToClipboard}
           >
-            {props.address.substr(0, 10)}...
+            {props.address.substr(0, 4)}...
             {props.address.substr(-4, 4)}
           </span>
         </div>
@@ -77,7 +77,7 @@ const AccountDetailComponent = props => {
               >
                 <div className="font-weight-bold">Account {index + 1}</div>
                 <span className="badge badge-secondary">
-                  {account.address.substr(0, 5)}...
+                  {account.address.substr(0, 4)}...
                   {account.address.substr(-4, 4)}
                 </span>
               </button>
@@ -127,13 +127,13 @@ const AccountDetailComponent = props => {
         <div className="d-flex justify-content-between">
           <h4>Mnemonic</h4>
           <div>
-            <a
+            <span>
               className="badge badge-primary text-white p-2"
               style={{ fontSize: 16 }}
               onClick={downloadMnemonicFile}
             >
               save
-            </a>
+            </span>
           </div>
         </div>
         <div className="mt-2">
