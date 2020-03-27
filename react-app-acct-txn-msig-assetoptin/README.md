@@ -1,4 +1,4 @@
-# Title: Simple Algo React App for Algorand Accounts and Transactions
+# Simple Algo: React App for Algorand Accounts and Transactions
 
 ## Overview
 Simple Algo is a React application that makes use of several Algorand features. Including [account creation](https://developer.algorand.org/docs/features/transactions/#payment-transaction), [account recovery / importing](https://developer.algorand.org/docs/features/transactions/#payment-transaction), [pay transaction](https://developer.algorand.org/docs/features/transactions/#payment-transaction), [multi-sig transactions](https://developer.algorand.org/docs/features/transactions/#payment-transaction) and [ASA opt-in](https://developer.algorand.org/docs/features/asa/#revoking-an-asset) transactions.
@@ -23,7 +23,7 @@ cd react-app-acct-txn-msig-assetoptin
 npm i
 ```
 
-Make changes to the `token` `server` and `port` values in `src/services/algorandsdk.js` if you're [talking to Algorand](https://developer.algorand.org/docs/build-apps/setup/#how-do-i-obtain-an-algod-address-and-token) using something other than sanbdox. 
+Make changes to the `token` `server` and `port` values in `src/services/algorandsdk.js` if you're [talking to Algorand](https://developer.algorand.org/docs/build-apps/setup/#how-do-i-obtain-an-algod-address-and-token) using something other than sandbox. 
 
 ```
 npm run start
