@@ -36,7 +36,7 @@ def block_time_intent_handler(handler_input):
     # type: (HandlerInput) -> Response
     try:
         network = handler_input.request_envelope.request.intent.slots["NETWORK"].resolutions.resolutions_per_authority[0].values[0].value.id
-    except AttributeError:
+    except (AttributeError, TypeError):
         network = config.DEFAULT_NETWORK
     client = pick_client(network)
     last_round = client.status().get("lastRound")
@@ -52,7 +52,7 @@ def predict_block_intent_handler(handler_input):
     # type: (HandlerInput) -> Response
     try:
         network = handler_input.request_envelope.request.intent.slots["NETWORK"].resolutions.resolutions_per_authority[0].values[0].value.id    
-    except AttributeError:
+    except (AttributeError, TypeError):
         network = config.DEFAULT_NETWORK
     client = pick_client(network)
     spb = handler_input.request_envelope.request.intent.slots["SPB"].value
@@ -82,7 +82,7 @@ def asset_info_intent_handler(handler_input):
     # type: (HandlerInput) -> Response
     try:
         network = handler_input.request_envelope.request.intent.slots["NETWORK"].resolutions.resolutions_per_authority[0].values[0].value.id
-    except AttributeError:
+    except (AttributeError, TypeError):
         network = None
     asset_id = handler_input.request_envelope.request.intent.slots["ASSETID"].value
     if network:
