@@ -14,6 +14,7 @@ Sample code for an Algorand Alexa skill that allows users to ask Alexa:
 - `config.py` - Default values for when the user underspecifies certain requests.
 - `util.py` - Various utility functions. A number of functions to help process datetime objects for predict round and time intents.
 - `prompts.py` - The natural language prompts that Alexa will use to deliver the retrieved information. Includes some prompt formatting functions.
+- `interaction_model.json` - The intent/slot/dialog schema and sample utterances that Alexa uses to build the skill's interaction model. Drop this into the JSON editor in the Alexa Developer Console.
 
 # Setup Instructions
 

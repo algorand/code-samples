@@ -1,0 +1,536 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "algorand",
+            "modelConfiguration": {
+                "fallbackIntentSensitivity": {
+                    "level": "LOW"
+                }
+            },
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "BlockTimeIntent",
+                    "slots": [
+                        {
+                            "name": "NETWORK",
+                            "type": "NETWORK"
+                        }
+                    ],
+                    "samples": [
+                        "{NETWORK} block",
+                        "{NETWORK} time",
+                        "get {NETWORK} round",
+                        "get round on {NETWORK}",
+                        "last round on {NETWORK}",
+                        "what is the latest round on {NETWORK}",
+                        "the current time on {NETWORK}",
+                        "the current time",
+                        "the time on {NETWORK}",
+                        "the time",
+                        "the block time on {NETWORK}",
+                        "give me {NETWORK} s current round",
+                        "give me the latest round on {NETWORK}",
+                        "give me the latest block on {NETWORK}",
+                        "what block is {NETWORK} on",
+                        "what block are we on on {NETWORK}",
+                        "what block are we on",
+                        "what is the current block on {NETWORK}",
+                        "give me the current time on {NETWORK}",
+                        "give me the current block on {NETWORK}",
+                        "give me the current time",
+                        "give me the current block",
+                        "what is the current block",
+                        "what is the current round",
+                        "what is the latest block",
+                        "what is the latest round",
+                        "give me the time on {NETWORK}",
+                        "what time is it on {NETWORK}",
+                        "give me the time",
+                        "what time is it"
+                    ]
+                },
+                {
+                    "name": "PredictBlockIntent",
+                    "slots": [
+                        {
+                            "name": "NETWORK",
+                            "type": "NETWORK"
+                        },
+                        {
+                            "name": "DATE",
+                            "type": "AMAZON.DATE",
+                            "samples": [
+                                "{DATE}"
+                            ]
+                        },
+                        {
+                            "name": "TIME",
+                            "type": "AMAZON.TIME",
+                            "samples": [
+                                "{TIME}"
+                            ]
+                        },
+                        {
+                            "name": "SPB",
+                            "type": "SPB"
+                        }
+                    ],
+                    "samples": [
+                        "block {NETWORK} {DATE} {TIME} {SPB} seconds",
+                        "block {NETWORK} {TIME}",
+                        "block {NETWORK} {DATE} {TIME}",
+                        "round on {DATE} at {TIME} {NETWORK}",
+                        "block on {DATE} at {TIME} {NETWORK}",
+                        "round on {DATE} at {TIME}",
+                        "block on {DATE} at {TIME}",
+                        "assume {SPB} seconds and give me the round on {DATE} at {TIME} on {NETWORK}",
+                        "give me the block at {TIME} {DATE} ",
+                        "assuming {SPB} seconds per block give me the block at {TIME} {DATE}",
+                        "give me the block at {TIME} on {DATE} for {NETWORK} assuming {SPB} seconds",
+                        "what block is at {TIME}",
+                        "give me the block for {DATE} at {TIME} on {NETWORK}",
+                        "the block on {DATE} at {TIME}",
+                        "the block on {DATE} at {TIME} on {NETWORK}",
+                        "the block at {TIME} on {DATE}",
+                        "the block at {TIME} on {DATE} on {NETWORK}",
+                        "give me the block at {TIME} on {DATE} for {NETWORK} assuming {SPB} seconds",
+                        "give me the block at {TIME} on {DATE} for {NETWORK}",
+                        "give me the block at {TIME} on {DATE} assuming {SPB} seconds",
+                        "give me the block at {TIME} assuming {SPB} seconds",
+                        "give me the block at {TIME}"
+                    ]
+                },
+                {
+                    "name": "PredictTimeIntent",
+                    "slots": [
+                        {
+                            "name": "ROUND",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "block {ROUND}",
+                                "round {ROUND}",
+                                "{ROUND}"
+                            ]
+                        },
+                        {
+                            "name": "NETWORK",
+                            "type": "NETWORK"
+                        },
+                        {
+                            "name": "SPB",
+                            "type": "SPB"
+                        }
+                    ],
+                    "samples": [
+                        "tell me when block {ROUND} occurs on {NETWORK} assuming {SPB} second block times",
+                        "time round {ROUND} {SPB} seconds",
+                        "time block {ROUND} {NETWORK} {SPB} seconds",
+                        "time block {ROUND}",
+                        "time block {ROUND} {NETWORK}",
+                        "time round {ROUND} {NETWORK}",
+                        "time round {ROUND}",
+                        "when does round {ROUND} occur assuming {SPB} second rounds",
+                        "when will round {ROUND} occur assuming {SPB} second blocks",
+                        "assume {SPB} and tell me when {NETWORK} round {ROUND} occurs",
+                        "assume {SPB} and tell me when {NETWORK} block {ROUND}  occurs",
+                        "tell me when block {ROUND} occurs assuming {SPB} seconds",
+                        "assume {SPB} second blocks when is block {ROUND} on {NETWORK}",
+                        "when is block {ROUND} on {NETWORK} assuming {SPB} second blocks",
+                        "when is block {ROUND} expected to occur on {NETWORK}",
+                        "when is block {ROUND} expected to occur",
+                        "when did round {ROUND} occur on {NETWORK}",
+                        "when will round {ROUND} occur on {NETWORK}",
+                        "when did round {ROUND} occur",
+                        "when will round {ROUND} occur",
+                        "when is block {ROUND} on {NETWORK}",
+                        "when is block {ROUND}",
+                        "what time is round {ROUND} on {NETWORK}",
+                        "when is round {ROUND} on {NETWORK}",
+                        "what time is {ROUND} on {NETWORK}",
+                        "when is round {ROUND}"
+                    ]
+                },
+                {
+                    "name": "AssetInfoIntent",
+                    "slots": [
+                        {
+                            "name": "ASSETID",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "asset {ASSETID}",
+                                "{ASSETID}"
+                            ]
+                        },
+                        {
+                            "name": "NETWORK",
+                            "type": "NETWORK"
+                        }
+                    ],
+                    "samples": [
+                        "tell me about asset {ASSETID} {NETWORK}",
+                        "asset {ASSETID} {NETWORK}",
+                        "asset id on {NETWORK}",
+                        "about asset {ASSETID} ON {NETWORK}",
+                        "tell me about asset {ASSETID} on {NETWORK}",
+                        "about asset {ASSETID}",
+                        "asset {ASSETID}",
+                        "asset id {ASSETID}",
+                        "Tell me about asset {ASSETID}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "NETWORK",
+                    "values": [
+                        {
+                            "id": "betanet",
+                            "name": {
+                                "value": "betanet",
+                                "synonyms": [
+                                    "beta network",
+                                    "beta net"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "mainnet",
+                            "name": {
+                                "value": "mainnet",
+                                "synonyms": [
+                                    "main network",
+                                    "main net"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "testnet",
+                            "name": {
+                                "value": "testnet",
+                                "synonyms": [
+                                    "test network",
+                                    "test net"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "SPB",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "5.5"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "5.45"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "5.4"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "5.35"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "5.3"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "5.25"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "5.2"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "5.15"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "5.1"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "5"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4.95"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4.9"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4.85"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4.8"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4.75"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4.7"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4.65"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4.55"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4.5"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4.45"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4.4"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4.35"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4.3"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4.25"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4.2"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4.15"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4.1"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4.6"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "3.5"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "3"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "PredictBlockIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "NETWORK",
+                            "type": "NETWORK",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "DATE",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1039242790736.946630560533"
+                            }
+                        },
+                        {
+                            "name": "TIME",
+                            "type": "AMAZON.TIME",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1039242790736.946722337799"
+                            }
+                        },
+                        {
+                            "name": "SPB",
+                            "type": "SPB",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "PredictTimeIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "ROUND",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.239401231617.178077850611"
+                            }
+                        },
+                        {
+                            "name": "NETWORK",
+                            "type": "NETWORK",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "SPB",
+                            "type": "SPB",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "AssetInfoIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "ASSETID",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1074427694447.112204860194"
+                            }
+                        },
+                        {
+                            "name": "NETWORK",
+                            "type": "NETWORK",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1039242790736.946722337799",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "For what time?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1039242790736.946630560533",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "For what date?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.239401231617.178077850611",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Tell me the target round."
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1074427694447.112204860194",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is the asset ID"
+                    }
+                ]
+            }
+        ]
+    }
+}
