@@ -1,2 +1,2 @@
-# code-samples
-Code samples tied to tutorials and solutions.
+# Code Samples
+Code samples for Solutions built on the Algorand blockchain.
