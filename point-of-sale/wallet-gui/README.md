@@ -22,3 +22,6 @@ mvn package
 ```
 java -jar target/appwalletgui-1.0-SNAPSHOT.jar
 ```
+
+## Modifying the Project
+This application was built with NetBeans using the form editor and javax package.
